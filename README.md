@@ -15,6 +15,8 @@ easysploit localip port
 
 (1) Windows --> test.exe (payload and listener) 
 
+(1x) Windows x64 --> test_x64.exe (payload and listener) 
+
 (2) Android --> test.apk (payload and listener)
 
 (3) Linux --> test.py (payload and listener) 

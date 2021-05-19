@@ -1,5 +1,7 @@
 # EasySploit
-EasySploit v4.2 (Linux) - Metasploit automation (EASIER and FASTER than EVER) 
+EasySploit v4.2 (macOS) - Metasploit automation (EASIER and FASTER than EVER) 
+
+Only support for macOS
 
 # Disclaimer:
 
@@ -8,6 +10,8 @@ EasySploit v4.2 (Linux) - Metasploit automation (EASIER and FASTER than EVER)
  EASYSPLOIT is intented ONLY FOR EDUCATIONAL PURPOSES!!! STAY LEGAL!!! 
  
 # Options:
+
+easysploit localip port
 
 (1) Windows --> test.exe (payload and listener) 
 
@@ -36,7 +40,7 @@ EasySploit v4.2 (Linux) - Metasploit automation (EASIER and FASTER than EVER)
 
 # How to install (The terminal must be launched as root user):
 
-git clone https://github.com/KALILINUXTRICKSYT/easysploit.git
+git clone https://github.com/levie-vans/easysploit.git
  
 cd easysploit
 
